@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="margin-top:30px">
+<center>
+<div class="jumbotron" style="width:50%;border-radius:20px">
+<h1>IMDb Movie Centre</h1>
+<div class="form-group">
+  <label>Enter Movie Name:</label>
+  <input type="text" class="form-control" id="input1" style="width:50%">
+</div>
+<div class="form-group">
+  <label>Enter Movie Year</label>
+  <input type="number" class="form-control" id="input2" style="width:50%">
+</div>
+<input type="button" value="Get Details" class="btn btn-primary" onclick="magic()"/>
+</div>
+</center>
+</body>
+<script>
+function magic(){
+var val1=document.getElementById("input1").value;
+var val2=document.getElementById("input2").value;
+console.log(val1);
+console.log(val2);
+var val3='http://localhost:8081/scrape?title='+val1+'&year='+val2;
+console.log(val3);
+if(val1=='')
+alert("Please Enter Movie Name");
+else if(val2=='')
+alert("Please Enter Movie Year");
+else
+location.href=val3;
+}
+</script>
+</body>
+</html>
