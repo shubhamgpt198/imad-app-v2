@@ -81,7 +81,7 @@ var query_url="http://www.imdb.com/find?q="+req.query.title+"+"+req.query.year+"
 
 app.use('/',router);
 app.get('/',function(req,res){
-res.sendFile(__dirname +'/index.html');
+res.sendFile(__dirname +'/ui/index.html');
 });
 
 app.listen('8080');
